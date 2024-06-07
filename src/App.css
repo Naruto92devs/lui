@@ -1,38 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans:ital@0;1&family=Spicy+Rice&display=swap');
+
+
+body {
+  background: #FFE1A1;
+}
+
 .App {
-  text-align: center;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-family: "Ropa Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  font-size: 1.4vw;
+  line-height: 120%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  width: 100%;
+  padding: 1vw 5vw;
+  padding-left: 8vw;
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 6vw;
+  align-items: center;
+  position: relative;
+}
+
+nav .bg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 9vw;
+  line-height: 100%;
+  font-family: "Spicy Rice", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  -webkit-text-stroke: .15vw black;
+  text-stroke: .15vw black;
+  text-shadow: .4vw .4vw #000 ;
+}
+
+h2 {
+  font-size: 5vw;
+  line-height: 100%;
+  font-family: "Spicy Rice", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  -webkit-text-stroke: .15vw black;
+  text-stroke: .1vw black;
+  text-shadow: .3vw .3vw #000 ;
+}
+
+nav a {
+  color: white;
+  font-size: 1.3vw;
+  line-height: 100%;
+  transition: all .2s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  margin-left: auto;
+}
+
+.socials a img {
+  width: 3vw;
+}
+
+.socials a img:hover {
+  filter: invert(100%);
+}
+
+
+/* hero_seciton */
+
+.hero_section {
+  width: 100%;
+  padding: 8vw 0 8vw 8vw;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+
+.hero_section .left .welcome {
+  width: 65%;
+}
+
+.hero_section .left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5vw;
+}
+
+.hero_section .left .buttons {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.hero_section .left .buttons a img {
+  width: 8vw;
+  transition: all .3s;
+}
+
+.hero_section .left .buttons a img:hover {
+  filter: invert(100%);
+}
+
+.hero_section .hero {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  top: 0vw;
+}
+
+/* about */
+
+.about {
+  width: 100%;
+  padding: 3vw 12vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2vw;
+  text-align: center;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.about .cloud {
+  width: 15vw ;
+  position: absolute;
+  top: 8vw;
+  z-index: -1;
+  left: 0;
+  animation: slide 15s infinite alternate-reverse;
 }
 
-@keyframes App-logo-spin {
+@keyframes slide {
   from {
-    transform: rotate(0deg);
+    left: 0;
   }
+
   to {
-    transform: rotate(360deg);
+    left: 85vw;
   }
 }
+
+.about .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+}
+
+.about .content .bg {
+  width: 100%;
+  margin-bottom: -22.5vw;
+}
+
+.about .content p {
+  padding: 0 15%;
+}
+
+/* info */
+
+.info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5vw 10vw;
+  padding-top: 10vw;
+}
+
+.info .left {
+  width: 30%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5vw;
+  padding-top: 3vw;
+}
+
+.info .left img {
+  width: 100%;
+}
+
+.info .left .dot {
+  position: absolute;
+  top: 9.5vw;
+  left: 0vw;
+  width: 1.5vw;
+}
+
+.info .left p {
+  padding-left: 3vw;
+}
+
+.info .right {
+  width: 60%;
+}
+
+.info .right img{
+  width: 100%;
+}
+
+/* join */
+
+.join {
+  width: 100%;
+  padding: 4vw 12vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5vw;
+  text-align: center;
+}
+
+.join h2 {
+  margin-top: -23vw;
+}
+
+.join img {
+  width: 100%;
+}
+
+.join p {
+  padding: 0 18%;
+}
+
+.join a img {
+  width: 10vw;
+}
+
+
+/* footer */
+
+footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw 3vw;
+}
+
+footer a .logo {
+  width: 10vw;
+}
+
+footer .socials {
+  margin-left: 0;
+}
+
+
+/* website responsive */
+
+@media(max-width:768px) {
+  p {
+    font-size: 3.5vw;
+    line-height: 130%;
+  }
+
+  h1 {
+    font-size: 14vw;
+    line-height: 100%;
+    font-family: "Spicy Rice", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    -webkit-text-stroke: .15vw black;
+    text-stroke: .15vw black;
+    text-shadow: .4vw .4vw #000 ;
+  }
+  
+  h2 {
+    font-size: 7vw;
+    line-height: 100%;
+    font-family: "Spicy Rice", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    -webkit-text-stroke: .15vw black;
+    text-stroke: .1vw black;
+    text-shadow: .3vw .3vw #000 ;
+  }
+  
+  nav {
+    width: 100%;
+    padding: 1.5vw 5vw;
+    padding-left: 5vw;
+    display: flex;
+    gap: 6vw;
+    align-items: center;
+    position: relative;
+  }
+  
+  nav .bg {
+    width: 200%;
+    position: absolute;
+    top: 0;
+    left: -50%;
+    z-index: -1;
+  }
+  
+  
+  
+  nav a {
+    color: white;
+    font-size: 3vw;
+    line-height: 100%;
+    transition: all .2s;
+  }
+
+  nav a:nth-of-type(3) {
+    margin-left: 19vw;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+    color: yellow;
+  }
+  
+  .socials {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    margin-left: auto;
+  }
+  
+  .socials a img {
+    width: 6vw;
+  }
+  
+  .socials a img:hover {
+    filter: invert(100%);
+  }
+  
+  
+  /* hero_seciton */
+  
+  .hero_section {
+    width: 100%;
+    padding: 15vw 0 15vw 8vw;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+  }
+  
+  .hero_section .left .welcome {
+    width: 65%;
+  }
+  
+  .hero_section .left {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5vw;
+  }
+  
+  .hero_section .left .buttons {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+  }
+  
+  .hero_section .left .buttons a img {
+    width: 20vw;
+    transition: all .3s;
+  }
+  
+  .hero_section .left .buttons a img:hover {
+    filter: invert(100%);
+  }
+  
+  .hero_section .hero {
+    width: 60%;
+    position: absolute;
+    right: 0;
+    top: 0vw;
+  }
+  
+  /* about */
+  
+  .about {
+    width: 100%;
+    padding: 3vw 0vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0vw;
+    text-align: center;
+    position: relative;
+  }
+  
+  .about .cloud {
+    width: 15vw ;
+    position: absolute;
+    top: 17vw;
+    z-index: -1;
+    left: 0;
+    animation: slide 15s infinite alternate-reverse;
+  }
+  
+  @keyframes slide {
+    from {
+      left: 0;
+    }
+  
+    to {
+      left: 85vw;
+    }
+  }
+  
+  .about .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+  }
+  
+  .about .content .bg {
+    width: 100%;
+    height: 50vw;
+    margin-bottom: -40.5vw;
+  }
+  
+  .about .content p {
+    padding: 0 7%;
+    font-size: 3.2vw;
+    line-height: 120%;
+  }
+
+  /* info */
+
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  padding: 5vw 7vw;
+  padding-top: 10vw;
+}
+
+.info .left {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 5vw;
+  padding-top: 3vw;
+}
+
+.info .left img {
+  width: 60%;
+}
+
+.info .left .dot {
+  position: absolute;
+  top: 9.5vw;
+  left: 0vw;
+  width: 1.5vw;
+  display: none;
+}
+
+.info .left p {
+  padding-left: 0vw;
+}
+
+.info .right {
+  width: 100%;
+}
+
+.info .right img{
+  width: 100%;
+}
+
+/* join */
+
+.join {
+  width: 100%;
+  padding: 7vw 0vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5vw;
+  text-align: center;
+}
+
+.join h2 {
+  margin-top: -44vw;
+}
+
+.join .bg {
+  width: 100%;
+  height: 53vw;
+}
+
+.join p {
+  padding: 0 8%;
+}
+
+.join a img {
+  width: 20vw;
+  height: auto;
+}
+
+/* footer */
+
+footer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  padding: 1vw 3vw;
+}
+
+footer a .logo {
+  width: 30vw;
+  order: 1;
+}
+
+footer p {
+  order: 3;
+}
+
+footer .socials {
+  margin-left: 0;
+  order: 2;
+}
+
+}
+
+
+
